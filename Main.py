@@ -15,7 +15,6 @@ pag1, pag2 = st.tabs(["Serviços", "Contato"])
 with pag1:
     st.header("Serviços de Qualidade você só encontra aqui!")
     st.write("Oferecemos uma ampla gama de serviços para atender às necessidades da sua empresa. Desde consultoria estratégica até soluções tecnológicas, estamos aqui para ajudá-lo a alcançar o sucesso.")
-   
     st.write("Orçamento de arquivos, compativel com whatsapp. Para melhor eficiencia.")
 
 with pag2:
