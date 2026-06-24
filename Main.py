@@ -1,10 +1,9 @@
 import  streamlit as st
 
-st.title("tudo para sua empresa.")
+st.title("Tudo para sua empresa.")
 
 if st.button("Clique aqui para começar"):
     st.write("Novos recursos estarão disponíveis em breve! Fique atento às atualizações e aproveite ao máximo nossa plataforma para impulsionar sua empresa.")
-
 
 
 
