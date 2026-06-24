@@ -1,6 +1,6 @@
 import  streamlit as st
 
-st.title("Tudo para sua empresa.")
+st.set_page_config(page_title="Tudo para sua empresa", page_icon=":bar_chart:", layout="wide")
 
 if st.button("Clique aqui para começar"):
     st.write("Novos recursos estarão disponíveis em breve! Fique atento às atualizações e aproveite ao máximo nossa plataforma para impulsionar sua empresa.")
