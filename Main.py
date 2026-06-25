@@ -5,7 +5,7 @@ from PIL import Image
 
 
 st.set_page_config(page_title="Tudo para sua empresa", page_icon=":bar_chart:", layout="wide")
-st.title("tudo para sua empresa", page_icon=":copyright:")
+st.title("tudo para sua empresa",")
 if st.button("Clique aqui para começar"):
     st.write("Novos recursos estarão disponíveis em breve! Fique atento às atualizações e aproveite ao máximo nossa plataforma para impulsionar sua empresa.")
 
