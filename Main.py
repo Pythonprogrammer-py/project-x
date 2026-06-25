@@ -19,8 +19,8 @@ with pag1:
     st.write("Orçamento de arquivos, compativel com whatsapp. Para melhor eficiencia.")
 
     st. title("Resultado de somas repetidas.")
-
-numero = st.number_input("Quantos aquivos deseja processar", min_value=1, step=1)
+    st.write("A ferramenta a baixo está em Beta, nossa equipe está trabalhando para melhorar a experiencia do usuário.")
+numero = st.number_input("Quantos arquivos deseja processar", min_value=1, step=1)
 
 for i in range(numero):
     i = i+1
