@@ -1,11 +1,11 @@
 import  streamlit as st
 from PIL import Image
 import pandas as pd
-from streamlit_option_menu import option_menu
+
 
 # 1. Criação do menu (pode ser na barra lateral ou no topo)
 with st.sidebar:
-    opcao = option_menu(
+    opcao =(
         menu_title="Menu Principal",
         options=["Home", "Análise de Dados", "Configurações"],
         icons=["house", "bar-chart", "gear"],
