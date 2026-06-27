@@ -43,7 +43,7 @@ with servicos:
     reg  = st.button("Registro")
     if log:
         login()
-    else reg:
+    else reg
         registro()
             
     
