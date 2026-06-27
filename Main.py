@@ -4,4 +4,4 @@ import pandas as pd
 
 
 # 1. Criação do menu (pode ser na barra lateral ou no topo)
-st.tabs.title("Menu de Navegação")
+home, servicos, contato , descricao = st.tabs(["Menu de Navegação"], home="Home", servicos="Serviços", contato="Contato", descricao="Descrição")
