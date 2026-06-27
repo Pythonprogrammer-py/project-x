@@ -39,10 +39,11 @@ with servicos:
     st.title("Serviços")
     st.write("faça login para acessar os serviços.")
     st.write("se não possui um registro, clique no botão abaixo para se registrar.")
-    acess = st.radio("Acesso", ["Login", "Registro"])
-    if acess == login:
+    log = st.button("Login")
+    reg  = st.button("Registro")
+    if log:
         login()
-    else:
+    else reg:
         registro()
             
     
