@@ -36,11 +36,18 @@ with home:
 
 with servicos:
     st.title("Serviços")
-    st.write("faça login para acessar os serviços.")
-    with st.expander("Login"):
-        login()
-    with st.expander("Registro"):
-        registro()
+    st. write("Aqui você pode acessar nossos serviços. Para isso, é necessário estar logado.")
+    if st.button("Acessar serviços"):
+        st.warning("Você precisa estar logado para acessar os serviços.")
+    
+    if st.button("Fazer login"):
+        with st.expander("Login"):
+            login()
+        st.write("Se você ainda não tem uma conta, faça seu registro.")
+        if st.button("Registrar"):
+            with st.expander("Registro"):
+                registro()
+                st.write("Após o registro, você poderá acessar nossos serviços.")
 
 
 
