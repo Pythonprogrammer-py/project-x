@@ -11,7 +11,7 @@ def login():
     with st.form("login_form"):
         name = st.text_input("Usuário")
         senha = st.text_input("Senha", type="password")
-        if st.form_submit_button("Entrar")
+        if st.form_submit_button("Entrar"):
             st.success("Login realizado com sucesso!")
             st.write(f"Bem-vindo, {name}!")
 
