@@ -44,7 +44,8 @@ with servicos:
         with st.expander("Login"):
             login()
         st.write("Se você ainda não tem uma conta, faça seu registro.")
-        if st.button("Registrar"):
+        buton = st.button("Registrar"):
+        if buton: 
             with st.expander("Registro"):
                 registro()
                 st.write("Após o registro, você poderá acessar nossos serviços.")
