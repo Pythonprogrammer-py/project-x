@@ -38,11 +38,16 @@ with home:
 with servicos:
     st.title("Serviços")
     st.write("faça login para acessar os serviços.")
-    st.write("se não possui um registro, clique no botão abaixo para se registrar.")
-   
-   if st.button("Registrar"):
-            registro()
-   if st.button("Login"):
+    
+    
+    login_button = st.button("Login", on_click=login)
+    if login_button:
         login()
+    
+    st.write("se não possui um registro, clique no botão abaixo para se registrar.")
+    button_registro = st.button("Registrar", on_click=registro)
+
+    if button_registro:
+        registro()
             
     
