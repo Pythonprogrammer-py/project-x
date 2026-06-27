@@ -39,11 +39,10 @@ with servicos:
     st.title("Serviços")
     st.write("faça login para acessar os serviços.")
     st.write("se não possui um registro, clique no botão abaixo para se registrar.")
-    log = st.button("Login")
-    reg  = st.button("Registro")
-    if log:
+   
+   if st.button("Registrar"):
+            registro()
+   if st.button("Login"):
         login()
-    else reg
-        registro()
             
     
