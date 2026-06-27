@@ -10,12 +10,16 @@ def login():
     with st.form("login_form"):
         name = st.text_input("Usuário")
         senha = st.text_input("Senha", type="password")
+
+        dados = name , senha
+        with open("usuario.txt", "w", encoding="utf-8") as arquivo:
+            arquivo.write(dados)
+
         if st.form_submit_button("Entrar"):
+            pd.read_csv("usuario.txt")
             st.success("Login realizado com sucesso!")
-            st.write(f"Bem-vindo, {name}!")
-
-
-def registro():
+        else:
+            st.warning("Usuário ou senha incorretos. Tente novamente.")
     with st.form("registro_form"):
         name = st.text_input("Nome da empresa")
         email = st.text_input("Email")
@@ -28,6 +32,7 @@ def registro():
             st.write(f"Bem-vindo, {name}!")
         else:
             st.warning("Por favor, preencha todos os campos corretamente.")
+
         
 with home:
     st.title("Bem-vindo ao nosso site!")
@@ -43,12 +48,7 @@ with servicos:
     if st.button("Fazer login"):
         with st.expander("Login"):
             login()
-        st.write("Se você ainda não tem uma conta, faça seu registro.")
-        buton = st.button("Registrar")
-        if buton: 
-            with st.expander("Registro"):
-                registro()
-                st.write("Após o registro, você poderá acessar nossos serviços.")
+        
 
 
 
