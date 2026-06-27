@@ -9,9 +9,11 @@ home, servicos, informacoes, contato = st.tabs(["Home", "Serviços", "Informaç�
 
 def login():
     with st.form("login_form"):
-        st.text_input("Usuário")
-        st.text_input("Senha", type="password")
-        st.form_submit_button("Entrar")
+        name = st.text_input("Usuário")
+        senha = st.text_input("Senha", type="password")
+        if st.form_submit_button("Entrar")
+            st.success("Login realizado com sucesso!")
+            st.write(f"Bem-vindo, {name}!")
 
 
 with home:
