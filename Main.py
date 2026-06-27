@@ -8,8 +8,10 @@ home, servicos, informacoes, contato = st.tabs(["Home", "Serviços", "Informaç�
 
 
 def login():
-    st.text_input("Usuário")
-    st.text_input("Senha", type="password")
+    with st.form("login_form"):
+        st.text_input("Usuário")
+        st.text_input("Senha", type="password")
+        st.form_submit_button("Entrar")
 
 
 with home:
