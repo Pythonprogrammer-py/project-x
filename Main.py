@@ -16,14 +16,13 @@ def login():
 
 
 def registro():
-
     with st.form("registro_form"):
-
         name = st.text_input("Nome da empresa")
         email = st.text_input("Email")
         tipo_empresa = st.radio("Tipo de empresa", ["MEI", "EIRELI", "LTDA", "S/A"],)
         cnpj = st.number_input("CNPJ", step=14)
         senha = st.text_input("Senha", type="password")
+        
         if st.form_submit_button("Registrar"):
             st.success("Registro realizado com sucesso!")
             st.write(f"Bem-vindo, {name}!")
@@ -38,16 +37,12 @@ with home:
 with servicos:
     st.title("Serviços")
     st.write("faça login para acessar os serviços.")
-    
-    
-    login_button = st.button("Login", on_click=login)
-    if login_button:
+    with st.expander("Login"):
         login()
-    
-    st.write("se não possui um registro, clique no botão abaixo para se registrar.")
-    button_registro = st.button("Registrar", on_click=registro)
-
-    if button_registro:
+    with st.expander("Registro"):
         registro()
+
+
+
             
     
