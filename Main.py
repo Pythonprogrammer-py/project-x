@@ -12,22 +12,12 @@ def login():
         senha = st.text_input("Senha", type="password")
 
         if st.form_submit_button("Entrar"):
-            pd.read_csv("usuario.txt")
-            st.success("Login realizado com sucesso!")
-        else:
-            st.warning("Usuário ou senha incorretos. Tente novamente.")
-    with st.form("registro_form"):
-        name = st.text_input("Nome da empresa")
-        email = st.text_input("Email")
-        tipo_empresa = st.radio("Tipo de empresa", ["MEI", "EIRELI", "LTDA", "S/A"],)
-        cnpj = st.number_input("CNPJ", step=14)
-        senha = st.text_input("Senha", type="password")
+           st.success("Login realizado com sucesso!")
         
-        if st.form_submit_button("Registrar"):
-            st.success("Registro realizado com sucesso!")
-            st.write(f"Bem-vindo, {name}!")
         else:
-            st.warning("Por favor, preencha todos os campos corretamente.")
+
+            st.warning("Usuário ou senha incorretos. Tente novamente.")
+    
 
         
 with home:
@@ -36,15 +26,27 @@ with home:
     st.write("Estamos trabalhando para trazer mais funcionalidades em breve.")
 
 with servicos:
+
+    
+
+    def registro():
+        with st.form("registro_form"):
+         name = st.text_input("Nome da empresa")
+         email = st.text_input("Email")
+         tipo_empresa = st.radio("Tipo de empresa", ["MEI", "EIRELI", "LTDA", "S/A"],)
+         cnpj = st.number_input("CNPJ", step=14)
+         senha = st.text_input("Senha", type="password")
+        
+         if st.form_submit_button("Registrar"):
+             st.success("Registro realizado com sucesso!")
+             st.write(f"Bem-vindo, {name}!")
+         else:
+            st.warning("Por favor, preencha todos os campos corretamente.")
     st.title("Serviços")
     st. write("Aqui você pode acessar nossos serviços. Para isso, é necessário estar logado.")
     if st.button("Acessar serviços"):
         st.warning("Você precisa estar logado para acessar os serviços.")
-    
-    if st.button("Fazer login"):
-        with st.expander("Login"):
-            login()
-        
+        st.button("Fazer login", on_click=registro())
 
 
 
