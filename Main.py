@@ -11,10 +11,6 @@ def login():
         name = st.text_input("Usuário")
         senha = st.text_input("Senha", type="password")
 
-        dados = name , senha
-        with open("usuario.txt", "w", encoding="utf-8") as arquivo:
-            arquivo.write(dados)
-
         if st.form_submit_button("Entrar"):
             pd.read_csv("usuario.txt")
             st.success("Login realizado com sucesso!")
