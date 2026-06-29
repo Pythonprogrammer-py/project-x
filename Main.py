@@ -45,11 +45,3 @@ with servicos:
     st.title("Serviços")
     st. write("Aqui você pode acessar nossos serviços. Para isso, é necessário estar logado.")
     if st.button("Acessar serviços", on_click=login()):
-    
-
-
-
-
-
-            
-    
