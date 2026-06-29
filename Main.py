@@ -40,13 +40,15 @@ with servicos:
          if st.form_submit_button("Registrar"):
              st.success("Registro realizado com sucesso!")
              st.write(f"Bem-vindo, {name}!")
-         else:
-            st.warning("Por favor, preencha todos os campos corretamente.")
+         
     st.title("Serviços")
     st. write("Aqui você pode acessar nossos serviços. Para isso, é necessário estar logado.")
     if st.button("Acessar serviços"):
-        st.warning("Você precisa estar logado para acessar os serviços.")
+
         st.button("Fazer login", on_click=registro())
+    st.write("Se já possui uma conta faça login para continuar")
+    if st.button("Fazer login"):
+        login()
 
 
 
