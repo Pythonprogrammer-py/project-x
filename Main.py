@@ -5,8 +5,9 @@ import pandas as pd
 # 1. Criação do menu (pode ser na barra lateral ou no topo)
 home, servicos, informacoes, contato = st.tabs(["Home", "Serviços", "Informações", "Contato"])
 
-
+registro = st.button("Registrar-se")
 def login():
+    
     with st.form("login_form"):
         name = st.text_input("Usuário")
         senha = st.text_input("Senha", type="password")
@@ -15,9 +16,9 @@ def login():
            st.success("Login realizado com sucesso!")
         
         else:
-
             st.warning("Usuário ou senha incorretos. Tente novamente.")
-    
+            st.write("Se você ainda não possui uma conta, clique no botão 'Registrar-se' para criar uma.")  
+            
 
         
 with home:
@@ -43,12 +44,10 @@ with servicos:
          
     st.title("Serviços")
     st. write("Aqui você pode acessar nossos serviços. Para isso, é necessário estar logado.")
-    if st.button("Acessar serviços"):
+    if st.button("Acessar serviços", on_click=login()):
+    
 
-        st.button("Fazer login", on_click=registro())
-    st.write("Se já possui uma conta faça login para continuar")
-    if st.button("Fazer login"):
-        login()
+
 
 
 
